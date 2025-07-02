@@ -1,4 +1,5 @@
 // ⭐⭐⭐⭐⭐ LAB FINAL
+// https://ideone.com/X2Qhgv
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -34,7 +35,7 @@ int main() {
   knap sack[n];
   for (int i = 0; i < n; i++) {
     sack[i].object = i;
-    sack[i].p_by_w = double(profit[i] / double(weights[i]));
+    sack[i].p_by_w = double(profit[i]) / double(weights[i]);
   }
 
   sort(sack, sack + n, comparep_by_w);
