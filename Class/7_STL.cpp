@@ -1,59 +1,64 @@
-// ideone.com/vjzAYC
-#include <bits/stdc++.h>
-using namespace std;
+  // ideone.com/vjzAYC
+  #include <bits/stdc++.h>
+  using namespace std;
 
-int main() {
-  vector<int> vec;  // 1D array // dynamic// created with linked list but acts
-                    // like an array
-  // vector<int>vec[5]; //2D array , column is dynamic but the array row is
-  // fixed. vector<int>vec(5); //1D array & size fixed vector<vector<int>>vec;
-  // //2D array & dynamic
+  int main() {
+    vector<int> vec;  // 1D array, dynamic, created with linked list but acts like an array
+    
+    vector<int>vec[5]; //An array of 5 vectors -> its like a 2D structure where wors are fixed and its 5, columns are dynamic.
 
-  // vector<int>vec;
-  // vector<string>vec(5); // 5 size of string array, we can take 5 strings, it
-  // works like 2d as string keeps at stack vector<float>f[8];
-  // vector<vector<char> >ch; // 2d
-  // vector<vector<string> >str; // 3d
+    vector<int>vec(5); //1D array of size 5.
 
-  //   vec.push_back(10);
-  //   vec.push_back(20);
-  //   vec.pop_back();
+    vector<vector<int>>vec; //2D vector where row & col both are dynamic
 
-  //   for (int i = 0; i < vec.size(); i++) {
-  //     cout << vec[i] << " ";
-  //   }
+    vector<string>vec(5); // An string containing vector of 5 size.We can take 5 strings in it, it works like 2d as string keeps at stack.
 
-  //   vector<int> v[10];
-  //   v[4].push_back(100);
+    vector<float>f[8]; // An array of 8 float vectors
+    vector<vector<char> >ch; // 2D vector of characters.
+    vector<vector<string> >str; // 2D string vector but each string is of multiple character so er can say it is 3D. 
 
-  //   for (int i = 0; i < v[4].size(); i++) {
-  //     cout << v[4][i] << " ";
-  //   }
+      vec.push_back(10);
+      vec.push_back(20);
+      vec.pop_back();
 
-  // maxheap
-  //   priority_queue<int>maxHeap;
+      for (int i = 0; i < vec.size(); i++) {
+        cout << vec[i] << " ";
+      }
 
-  //   maxHeap.push(50);
-  //   maxHeap.push(15);
-  //   maxHeap.push(20);
-  //   maxHeap.push(60);
+      vector<int> v[10];
+      v[4].push_back(100);
 
-  //   while(maxHeap.size() > 0){
-  //     cout << maxHeap.top() << " ";
-  //     maxHeap.pop();
-  //   }
+      for (int i = 0; i < v[4].size(); i++) {
+        cout << v[4][i] << " ";
+      }
 
-  // min_heap
-  priority_queue<int, vector<int>, greater<int> > minHeap;
+    // maxheap
+      priority_queue<int>maxHeap; // by default priority_queue makes a max-heap
 
-  minHeap.push(20);
-  minHeap.push(15);
-  minHeap.push(40);
-  minHeap.push(25);
+      maxHeap.push(50);
+      maxHeap.push(15);
+      maxHeap.push(20);
+      maxHeap.push(60);
 
-  while (minHeap.size() > 0) {
-    cout << minHeap.top() << " ";
-    minHeap.pop();
+      while(maxHeap.size() > 0){
+        cout << maxHeap.top() << " ";
+        maxHeap.pop();
+      }
+
+    // min_heap
+    priority_queue<int, vector<int>, greater<int> > minHeap;
+    // first int means -> we are storing integers in the heap.
+    // then vector<int> means -> the elements inside the heap will be integer.
+    // then greater<int> means -> it will make the smaller numbers come first.
+
+    minHeap.push(20);
+    minHeap.push(15);
+    minHeap.push(40);
+    minHeap.push(25);
+
+    while (minHeap.size() > 0) {
+      cout << minHeap.top() << " ";
+      minHeap.pop();
+    }
+    return 0;
   }
-  return 0;
-}
