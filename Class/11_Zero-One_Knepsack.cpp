@@ -23,12 +23,12 @@ int main() {
   }
 
   for (int i = 1; i < n + 1; i++) {
-    for (int j = 1; j < m + 1; j++) {
-      if (weight[i - 1] > j) {
+    for (int j = 1; j < m + 1; j++) {  //As the array is 1 based and the i-1 th will represent the current element correctly. 
+      if (weight[i - 1] > j) {// If the current item is too heavy for capacity j, we can’t take it, so just take the previous value.
         sack[i][j] = sack[i - 1][j];
       } else {
-        sack[i][j] =
-            max(sack[i - 1][j], sack[i - 1][j - weight[i - 1]] + profit[i - 1]);
+        sack[i][j] = max(sack[i - 1][j], sack[i - 1][j - weight[i - 1]] + profit[i - 1]);
+        // now if we take the item then the profit = profit for the current item + profit got by the remaing capacity. if the taken_item profit is less than our previous profit then we wont take it. Means the MAX one will be considered
       }
     }
   }
