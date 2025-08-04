@@ -5,7 +5,7 @@
   int main() {
     vector<int> vec;  // 1D array, dynamic, created with linked list but acts like an array
     
-    vector<int>vec[5]; //An array of 5 vectors -> its like a 2D structure where wors are fixed and its 5, columns are dynamic.
+    vector<int>vec[5]; //An array of 5 vectors -> its like a 2D structure where number of rows are fixed and its 5, columns are dynamic.
 
     vector<int>vec(5); //1D array of size 5.
 
