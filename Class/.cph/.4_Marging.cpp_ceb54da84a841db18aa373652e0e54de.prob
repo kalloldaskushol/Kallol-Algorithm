@@ -1,0 +1,1 @@
+{"name":"Local: 4_Marging","url":"e:\\PROGRAMMING\\Kallol-Algorithm\\Class\\4_Marging.cpp","tests":[{"id":1754206892067,"input":"3 3\n2 8 15\n3 5 12","output":"2 3 5 8 12 15 "}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\PROGRAMMING\\Kallol-Algorithm\\Class\\4_Marging.cpp","group":"local","local":true}

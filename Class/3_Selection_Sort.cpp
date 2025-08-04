@@ -9,7 +9,8 @@ void selection(int n, int arr[]) {
       if (arr[j] < arr[i]) {
         swap(arr[i], arr[j]);
       }
-
+      
+      // For printing every steps:
       for (int i = 0; i < n; i++) {
         cout << arr[i] << " ";
       }

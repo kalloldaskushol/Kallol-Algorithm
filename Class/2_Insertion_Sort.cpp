@@ -1,8 +1,8 @@
 // ideone.com/zXzLmN
 #include <bits/stdc++.h>
 using namespace std;
-// why it is called insertion sort => we are comparing then inserting it to the
-// postition. what is the worst case of it => reverse sorted array (5,4,3,2,1)
+// why it is called insertion sort => we are comparing then inserting it to the postition.
+// what is the worst case of it => reverse sorted array (5,4,3,2,1)
 void insertion(int n, int arr[]) {
 
   for (int i = 0; i < n; i++) {  // for picking values

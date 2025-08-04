@@ -9,11 +9,13 @@ struct knap { // to make a custom structure, So that we can store the product by
     double p_by_w; // product by weight -> double cz it can be a decimal number.
 };
 
-bool compare_p_by_w(knap n1, knap n2) {
-    if (n1.p_by_w > n2.p_by_w)
-      return true;
-    else
-      return false;
+// bool compare_p_by_w(knap n1, knap n2) {
+//     if (n1.p_by_w > n2.p_by_w)  return true;
+//     else  return false;
+// }
+
+bool compare_p_by_w(knap n1, knap n2){
+  return n1.p_by_w > n2.p_by_w;
 }
 
 int main() {
@@ -42,7 +44,7 @@ int main() {
   }
 
   sort(sack, sack + n, compare_p_by_w); // sort function -> it will sort the sack structure by the profit by weight
-            //sort funtion will take O(nlogn) thats the total comp ⭐
+                                        //!   sort funtion will take O(nlogn) thats the total comp ⭐
              
   int RW = m; // initally the remaining weight is the total weight of the full bag.
   
