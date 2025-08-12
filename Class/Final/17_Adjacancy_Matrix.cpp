@@ -1,5 +1,5 @@
 //! ⭐⭐⭐⭐⭐
-//! ideone.com/
+//! ideone.com/x0UePM
 //! Why we take n + 1 at row and col at graph 
 //! Row and col are dedicated to the node at array representation, and the value [i][j] at the slots are edges value
 //! But not in LL same story -> row are static but col are dynamic. row are node and the value of [i][j] are also node at LL.
