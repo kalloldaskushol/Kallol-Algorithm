@@ -6,7 +6,7 @@ int graph[1001][1001]; //! but default zero
 int visit[1001];
 int node, edge;
 
-void BFS(int start){ // Why bread first search
+void BFS(int start){ // Why breadth first search
 
     // Initial Step
     visit[start] = 1;

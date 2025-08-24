@@ -1,5 +1,4 @@
-// ideone.com/8r1vQg
-
+// https://ideone.com/8r1vQg
 /*
 memset(arr, 0, sizeof(arr)) its stored values by byte =>
     00000000-00000000-00000000 which is 0
@@ -19,7 +18,6 @@ so if the memset is called by -1
     in bytes it becomes --> 11111111-11111111-11111111-11111111 which is -1
 ! thats why memset can worked perfectly with -1 and 0.
 */
-
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -62,7 +60,7 @@ int main(){
 
     // not always at last, so lets find the maximum length
     int maxVal = INT_MIN;
-    int maxidx;
+    int maxidx; // maxidx → index where LIS ends.
     for(int i = 0; i<n; i++){
         if(LIS[i] > maxVal) {
             maxVal = LIS[i];
@@ -72,7 +70,7 @@ int main(){
 
     cout << "LIS Length = " << maxVal << endl;
 
-    // Print the Tracker array
+    // Print the Tracker array --> Helps visualize the previous index for each element in LIS.
     for(int i = 0; i<n; i++){
         cout << Tracker[i] << " ";
     }
@@ -82,8 +80,8 @@ int main(){
     vector<int> ans;
     
     for(int i = maxidx; i>=0; ){
-        
-        ans.push_back(list[i]);
+
+        ans.push_back(list[i]); // put the i-th element into the answer
         i = Tracker[i];
     }
 
