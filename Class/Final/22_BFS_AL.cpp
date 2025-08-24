@@ -1,18 +1,21 @@
-#include <bits/stdc++.h>
 // https://ideone.com/buke19
+/*
+BFS complexity: O(V + E)
+For complete graph: O(V^2)
+*/
+#include <bits/stdc++.h>
 using namespace std;
 // need to correct
-//! BFS is O(n2) on complate graph
+//! BFS is O(n2) on complete graph => because every node is connected to every other node
 
 vector<int> graph[1001]; //! but default zero
 int visit[1001];
 int node, edge;
 
-void BFS(int start){ // Why bread first search
+void BFS(int start){
     
     // Initial Step
     visit[start] = 1;
-    cout << start << " ";
     queue<int> Q;
     Q.push(start);
     
