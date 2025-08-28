@@ -1,0 +1,1 @@
+{"name":"Local: 22_BFS_List","url":"e:\\PROGRAMMING\\Kallol-Algorithm\\Practice\\LAB FINAL\\22_BFS_List.cpp","tests":[{"id":1756368797236,"input":"4 4\n1 2\n2 4\n1 3\n3 4","output":"1 2 3 4"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\PROGRAMMING\\Kallol-Algorithm\\Practice\\LAB FINAL\\22_BFS_List.cpp","group":"local","local":true}

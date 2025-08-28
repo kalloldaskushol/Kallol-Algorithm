@@ -6,30 +6,31 @@ int graph[1001][1001]; // size depends on n
 int visit[1001];
 int n, e;
 
-// void DFS_Stack(int start){
+void DFS_Stack(int start){
 
-//     //! Initial Step
-//     visit[start] = 1; // index number => node number
-//     cout << start << " ";
-//     stack<int>S;
-//     S.push(start);
+    //! Initial Step
+    visit[start] = 1; // index number => node number
+    cout << start << " ";
+    stack<int>S;
+    S.push(start);
 
 
-//     //! Repeating step
-//     while( ! S.empty() ){
+    //! Repeating step
+    while( ! S.empty() ){
         
-//         for(int j = 1; j<=n; j++){ //! j is the picking node
-//             int x = S.top(); // top always gets refreshed
-//             if(visit[j] == 0 && graph[x][j] != 0){
-//                 visit[j] = 1; // mark as visited
-//                 cout << j << " ";
-//                 S.push(j); // push the adjacent node onto the stack
-//                 j = 1; // reset j to 1 to continue checking from the first node
-//             }
-//         }
-//         S.pop(); // pop after the loop gets end, means that the node is visited fully.
-//     }
-// }
+        for(int j = 1; j<=n; j++){ //! j is the picking node
+
+            int x = S.top(); // top always gets refreshed
+            if(visit[j] == 0 && graph[x][j] != 0){
+                visit[j] = 1; // mark as visited
+                cout << j << " ";
+                S.push(j); // push the adjacent node onto the stack
+                j = 1; //?? reset j to 1 to continue checking from the first node
+            }
+        }
+        S.pop(); // pop after the loop gets end, means that the node is visited fully.
+    }
+}
 
 void DFS_Rec(int start){
     visit[start] = 1;

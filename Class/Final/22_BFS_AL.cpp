@@ -5,8 +5,8 @@ For complete graph: O(V^2)
 */
 #include <bits/stdc++.h>
 using namespace std;
-// need to correct
 //! BFS is O(n2) on complete graph => because every node is connected to every other node
+//! In general, BFS is O(V + E) => because we explore all vertices and edges
 
 vector<int> graph[1001]; //! but default zero
 int visit[1001];
@@ -16,20 +16,23 @@ void BFS(int start){
     
     // Initial Step
     visit[start] = 1;
+    cout << start << " ";
     queue<int> Q;
     Q.push(start);
-    
+
+    // repeating step
     while(!Q.empty()){
         int x = Q.front();
-        cout << x << " ";
+        // cout << x << " ";
         Q.pop();
 
         for(int j = 0; j < graph[x].size(); j++){
-            int nd = graph[x][j]; //! now node is this, prev it was connection. we dont need connection in L.L.
+            int node = graph[x][j]; //! now node is this, prev it was connection. we dont need connection in L.L.
             
-            if( visit[nd] == 0){
-                visit[nd] = 1;
-                Q.push(nd);
+            if( visit[node] == 0){
+                cout << node << " ";
+                visit[node] = 1;
+                Q.push(node);
             }
         }
     }
