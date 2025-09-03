@@ -23,8 +23,9 @@ void DFS_Stack(int start){
         for(int j = 1; j <= node; j++){ //! j for checking node
 
             if(visit[j] == 0 && graph[x][j] != 0){
-                visit[j] = 1; // mark as visited
+                visit[j] = 1;
                 cout << j << " ";
+
                 S.push(j); // push the adjacent node onto the stack
                 j = 1; // reset j to 1 to continue checking from the first node
             }
@@ -39,8 +40,9 @@ void DFS_Rec(int start){
     for(int j = 1; j <= node; j++){
 
         if(visit[j] == 0 && graph[start][j] != 0){
-            DFS_Rec(j);
+            
             visit[j] = 1;
+            DFS_Rec(j);
         }
     }
 }

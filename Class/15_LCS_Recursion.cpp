@@ -7,7 +7,7 @@ int n, m;
 int LCS(char A[], char B[], int i, int j){
     if(i == n || j == m)    return 0;
 
-    else if(A[i] == B[j])   return 1+ LCS(A, B, i+1, j+1);
+    else if(A[i] == B[j])   return 1 + LCS(A, B, i+1, j+1);
 
     else return max(LCS(A, B, i+1, j), LCS(A, B, i, j+1));
 }

@@ -18,7 +18,7 @@ void DFS(int u, int parent){
 	dis[u] = low[u] = ++timer; // Initialize discovery and low values by timer cz initialially same when it is entering. We dont know that it has an back edge or not.
 
 	int child = 0;
-	for(int v = 1; v <= n; v++){ // node traversal => v is column
+	for(int v = 1; v <= n; v++){ // node traversal => v is column //! v is the checking node
 
 		if( visit[v] == 0 && graph[u][v] != 0 ){ // not visited & there is a connection
 			
@@ -32,7 +32,7 @@ void DFS(int u, int parent){
 			}
 
 
-		} else if( graph[u][v] != 0 && v != parent ){ // Back edge found => connected but visited
+		} else if( graph[u][v] != 0 && v != parent ){ //! Back edge found => connected but visited
 			low[u] = min(low[u], dis[v]); //! need to be fully clear.....
 		}
 	}
