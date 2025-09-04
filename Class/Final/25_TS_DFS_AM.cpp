@@ -28,7 +28,7 @@ int main(){
         graph[u][v] = 1; // directed graph
     }
     
-    for(int i = 1; i <= n; i++){ //! <--------------------- Why -------------------------------->
+    for(int i = 1; i <= n; i++){
         if(visit[i] == 0){
             DFS(i);
         }

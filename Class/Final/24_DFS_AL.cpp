@@ -16,17 +16,17 @@ void DFS_Stack(int start){
     //! repeating step
     while (!S.empty()){
         
-        int x = S.top(); 
+        int x = S.top(); // x has the mother node
 
         for(int j = 0; j<graph[x].size(); j++){
             
-            int x = graph[x][j];
+            int adj_node = graph[x][j];
             
-            if(visit[x] == 0){ //if the node is unvisited
-                visit[x] = 1;
-                cout << x << " ";
-
-                S.push(x);  //! push the x onto the stack
+            if(visit[adj_node] == 0){ //if the adj_node is unvisited
+                visit[adj_node] = 1;
+                cout << adj_node << " ";
+                S.push(adj_node);  //! push the adj_node onto the stack
+                
                 j = 0; // reset j to 0 to continue checking from the first neighbor
                 x = S.top(); // As its DFS, we need to explore the new node fully before popping
             }
