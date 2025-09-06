@@ -14,17 +14,21 @@ int main() {
     cin >> weight[i];
   }
 
-  int sack[n + 1][m + 1];
-  for (int i = 0; i < n + 1; i++) {
-    sack[i][0] = 0;
+  int sack[n + 1][m + 1]; // row for items, column for capacity
+
+  // for row zero
+  for (int i = 0; i < n + 1; i++) { //! Must be n + 1 to get the last item
+    sack[i][0] = 0; // (item 0 → profit 0)
   }
+  // for col zero
   for (int j = 0; j < m + 1; j++) {
-    sack[0][j] = 0;
+    sack[0][j] = 0; // (weight 0 → profit 0)
   }
 
   for (int i = 1; i < n + 1; i++) {
     for (int j = 1; j < m + 1; j++) {  //As the array is 1 based and the i-1 th will represent the current element correctly. 
-      if (weight[i - 1] > j) {// If the current item is too heavy for capacity j, we can’t take it, so just take the previous value.
+      // If the current item is too heavy for capacity j, we can’t take it, so just take the previous value.
+      if (weight[i - 1] > j) {
         sack[i][j] = sack[i - 1][j];
       } else {
         sack[i][j] = max(sack[i - 1][j], sack[i - 1][j - weight[i - 1]] + profit[i - 1]);

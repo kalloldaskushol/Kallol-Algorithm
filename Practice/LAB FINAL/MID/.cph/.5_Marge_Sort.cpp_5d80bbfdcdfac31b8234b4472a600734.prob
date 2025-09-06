@@ -1,0 +1,1 @@
+{"name":"Local: 5_Marge_Sort","url":"e:\\PROGRAMMING\\Kallol-Algorithm\\Practice\\LAB FINAL\\MID\\5_Marge_Sort.cpp","tests":[{"id":1757136184122,"input":"5\n6 4 3 1 9 ","output":"1 3 4 6 9 "}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\PROGRAMMING\\Kallol-Algorithm\\Practice\\LAB FINAL\\MID\\5_Marge_Sort.cpp","group":"local","local":true}

@@ -12,14 +12,14 @@ void Merging(int L, int mid, int H, int arr[]) {
   }
 
   for (int j = 0; j < n; j++) {
-    B[j] = arr[mid + 1 + j];  // B starts from (mid+1)
+    B[j] = arr[(mid + 1) + j];  // B starts from (mid+1)
   }
 
   // now the partition is done, so it is time to build the marge function 
   int i = 0, j = 0, k = L;  // K = L new array starts from L
   while (i < m && j < n) {
     if (A[i] < B[j]) {
-      arr[k] = A[i];
+      arr[k] = A[i]; //! merged array will be the parametered one
       i++;
       k++;
     } else {
@@ -45,7 +45,7 @@ void MergeSort(int L, int H, int arr[]) {
     MergeSort(L, mid, arr);
     MergeSort(mid + 1, H, arr);  // O(log n)
     Merging(L, mid, H, arr);     // O(n)
-                                 // Total T.C O(nlogn)
+                                 // Total T.C O(nlogn) -> n times log n operations
   }
 }
 

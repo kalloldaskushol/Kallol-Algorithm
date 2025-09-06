@@ -33,7 +33,7 @@
       }
 
     // maxheap
-      priority_queue<int>maxHeap; // by default priority_queue makes a max-heap
+      priority_queue<int>maxHeap; //! by default priority_queue makes a max-heap
 
       maxHeap.push(50);
       maxHeap.push(15);
@@ -45,7 +45,7 @@
         maxHeap.pop();
       }
 
-    // min_heap
+    //! min_heap
     priority_queue<int, vector<int>, greater<int> > minHeap;
     // first int means -> we are storing integers in the heap.
     // then vector<int> means -> the elements inside the heap will be integer.

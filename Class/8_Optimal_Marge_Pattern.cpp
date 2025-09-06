@@ -27,7 +27,7 @@ int optimalMerge(vector<int> files) { // O(nlogn) complexity
 }
 
 int main() {
-  vector<int> files = {10, 20, 30, 5, 30};  // Making array by 5 arrays size
+  vector<int> files = {10, 20, 30, 5, 30};  // Making an array, by 5 arrays size
 
   int cost = optimalMerge(files);
 

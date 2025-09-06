@@ -73,7 +73,7 @@ int main() {
 
   double maxprofit = 0; // to calculate the max profit.
   for (int i = 0; i < n; i++) {
-    maxprofit = maxprofit + (X[i] * double(profit[i])); // max profit is equal to max profit + the size we took with the multiplication of the profit.
+    maxprofit = maxprofit + (X[i] * profit[i]); // max profit is equal to max profit + the size we took with the multiplication of the profit.
   }
   cout << maxprofit << endl;
 
