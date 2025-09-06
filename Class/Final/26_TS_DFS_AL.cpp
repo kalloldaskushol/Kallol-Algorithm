@@ -17,7 +17,7 @@ i ---- graph[i][j] --> node at this code
 void DFS(int start){ 
 
     visit[start] = 1; // mark as visited
-
+    //! start is the mother node
     for(int j = 0; j < graph[start].size(); j++){ // not node -> cz its list
         int node = graph[start][j]; //! this is node
         if(visit[node] == 0){ // only this cz directed graph, and it takes only those which has not been visited

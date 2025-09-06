@@ -14,7 +14,7 @@ void insertion(int n, int arr[]) {
       swap(arr[j + 1], arr[j]);
       j--;  // to check the previous index again
     }
-
+    // every element is sorted till j
     arr[j + 1] = pick;  // fix the position of every pick
     
   }

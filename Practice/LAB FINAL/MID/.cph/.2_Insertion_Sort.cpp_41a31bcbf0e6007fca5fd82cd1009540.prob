@@ -1,0 +1,1 @@
+{"name":"Local: 2_Insertion_Sort","url":"e:\\PROGRAMMING\\Kallol-Algorithm\\Practice\\LAB FINAL\\MID\\2_Insertion_Sort.cpp","tests":[{"id":1757059313776,"input":"5\n5 4 3 2 1","output":"1 2 3 4 5 "}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\PROGRAMMING\\Kallol-Algorithm\\Practice\\LAB FINAL\\MID\\2_Insertion_Sort.cpp","group":"local","local":true}

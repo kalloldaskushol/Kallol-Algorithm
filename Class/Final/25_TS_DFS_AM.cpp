@@ -25,7 +25,7 @@ int main(){
     int u, v;
     for(int i = 1; i<=e; i++){
         cin >> u >> v;
-        graph[u][v] = 1; // directed graph
+        graph[u][v] = 1; //! directed graph
     }
     
     for(int i = 1; i <= n; i++){
