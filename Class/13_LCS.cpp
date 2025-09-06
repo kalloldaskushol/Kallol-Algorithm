@@ -1,4 +1,4 @@
-// 
+// https://ideone.com/mJSXxo
 // LCS -> Tabulation
 #include <bits/stdc++.h>
 using namespace std;
@@ -14,10 +14,10 @@ int main(){
 
     int LCS[n+1][m+1];
 
-    for(int i = 0; i<n+1; i++){ // col 0
+    for(int i = 0; i<n+1; i++){ // row 0
         LCS[i][0] = 0;
     }
-    for(int j = 0; j<m+1; j++){ // row 0
+    for(int j = 0; j<m+1; j++){ // col 0
         LCS[0][j] = 0;
     }
 
@@ -42,22 +42,21 @@ int main(){
 
     // sequecnce
     string ans;
-    int i = n, j= m;
+    int i = n, j = m;
 
-    while(i>0){
-        if(s1[i-1] == s2[j-1]){
-            ans.push_back(s2[j-1]); // s2 cz the value comes from col
-            i = i-1;
-            j = j-1;
+    while (i > 0) {
+        if (s1[i-1] == s2[j-1]) {
+            ans.push_back(s2[j-1]); // character is part of LCS
+            i = i - 1;              // move diagonally up-left
+            j = j - 1;
         } else {
-            if(LCS[i][j] == LCS[i-1][j]){ // comes from up
-                i = i - 1;
-            } else { // comes from left 
-                j = j - 1;
+            if (LCS[i][j] == LCS[i-1][j]) { // value came from 'up'
+                i = i - 1;                  // move up
+            } else {                        // value came from 'left'
+                j = j - 1;                  // move left
             }
         }
     }
-
     for(int i = ans.size()-1; i>=0; i--){
         cout << ans[i];
     }
