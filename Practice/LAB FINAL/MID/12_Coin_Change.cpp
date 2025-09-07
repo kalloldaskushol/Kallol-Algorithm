@@ -7,6 +7,7 @@ int main(){
 	cin >> n >> m;
 	int coin[n];
 
+	//	input coin array
 	for(int i = 0; i < n; i++)	cin >> coin[i];
 
 	long long int dp[n+1][m+1];

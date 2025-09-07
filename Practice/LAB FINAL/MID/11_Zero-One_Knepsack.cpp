@@ -42,8 +42,7 @@ int main(){
 
 	int i = n, j = m;
 
-	while(i > 0){
-		
+	while(i > 0){	
 		if(sack[i][j] != sack[i-1][j]){
 			cout << "Product " << i << " is selected" << endl;
 			j = j - weight[i-1];

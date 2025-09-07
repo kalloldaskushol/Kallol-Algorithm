@@ -7,9 +7,11 @@ int OPM(vector<int> files){
 	for(int i = 0; i < files.size(); i++){
 		minHeap.push(files[i]);
 	}
-	int totol_Cost = 0;
+	
+	int total_Cost = 0;
 
-	while(minHeap.size() > 1){
+	while(minHeap.size() > 1){ //! we have at least two files
+		
 		int first = minHeap.top();
 		minHeap.pop();
 		int second = minHeap.top();
@@ -17,12 +19,12 @@ int OPM(vector<int> files){
 
 		int merge_Cost = first + second;
 
-		totol_Cost += merge_Cost;
+		total_Cost += merge_Cost;
 
 		minHeap.push(merge_Cost);
 	}
 	cout << minHeap.top() << endl;
-	return totol_Cost;
+	return total_Cost;
 }
 
 int main(){
