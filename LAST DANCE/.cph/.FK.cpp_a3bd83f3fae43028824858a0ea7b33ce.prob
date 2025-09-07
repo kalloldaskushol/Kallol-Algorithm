@@ -1,0 +1,1 @@
+{"name":"Local: FK","url":"e:\\PROGRAMMING\\Kallol-Algorithm\\LAST DANCE\\FK.cpp","tests":[{"id":1757272728060,"input":"2 10\n50 100\n5 10\n","output":"1 0.5\n100\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\PROGRAMMING\\Kallol-Algorithm\\LAST DANCE\\FK.cpp","group":"local","local":true}
