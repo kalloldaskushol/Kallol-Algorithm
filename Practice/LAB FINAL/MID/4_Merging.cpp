@@ -9,7 +9,7 @@ void Merging(int A[], int B[], int C[], int m, int n){
 			C[k] = A[i];
 			i++;
 			k++;
-		}else {
+		} else {
 			C[k] = B[j];
 			j++;
 			k++;

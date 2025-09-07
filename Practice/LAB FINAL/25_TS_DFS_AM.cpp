@@ -11,10 +11,11 @@ void DFS(int start){
 
 	for(int j = 1; j <= node; j++){
 		if(visit[j] == 0 && adj[start][j] != 0){
-			visit[j] = 1;
+			
 			DFS(j);
 		}
 	}
+	//! Loop ends push answer
 	ans.push_back(start);
 }
 

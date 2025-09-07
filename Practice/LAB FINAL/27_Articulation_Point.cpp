@@ -23,7 +23,7 @@ void DFS(int u, int parent){
 			child++;
 			DFS(v,u);
 			
-			low[u] = min( low[u], dis[u]);
+			low[u] = min(low[v], low[u]);
 
 			// not root && follows rule of AP
 			if(parent != -1 && dis[u] <= low[v]) {

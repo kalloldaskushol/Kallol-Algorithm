@@ -1,23 +1,21 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-
-
 void Merging(int L, int mid, int H, int arr[]){
-	int m = mid - L + 1;
-	int n = H - mid;
+	int m = mid - L + 1; //! Left SubArray Size
+	int n = H - mid; //! Right SubArray Size
 	int A[m], B[n];
 	
 	// fill time
 	for(int i = 0; i < m; i++){
-		A[i] = arr[L + i];
+		A[i] = arr[L + i]; //! A array starts from L
 	}
 	for(int j = 0; j < n; j++){
-		B[j] = arr[mid + 1 + j];
+		B[j] = arr[mid + 1 + j]; //! B array starts from (mid + 1)
 	}
 	
 	// now lets merge
-	int i = 0, j = 0, k = L;
+	int i = 0, j = 0, k = L; //! New array starts from L
 	
 	while(i < m && j < n){
 		if(A[i] < B[j]){

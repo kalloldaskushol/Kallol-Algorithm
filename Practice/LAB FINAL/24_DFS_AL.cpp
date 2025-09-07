@@ -13,7 +13,7 @@ void DFS(int start){
 
 	while(!s.empty()){
 		int x = s.top(); // x has the mother node
-		for(int j = 0; j<adj[x].size(); j++){ // neighour check
+		for(int j = 0; j < adj[x].size(); j++){ // neighour check
 
 			int neigbhour = adj[x][j];
 			if(visit[neigbhour] == 0){
@@ -29,6 +29,18 @@ void DFS(int start){
 	}
 }
 
+void DFS_Rec(int start) {
+	cout << start << " ";
+	visit[start] = 1;
+	for(int j = 0; j < adj[start].size(); j++){
+		int node = adj[start][j];
+		if(visit[node] == 0){
+			visit[node] = 1;
+			DFS_Rec(node);
+		}
+	}
+}
+
 int main() {
 
 	cin >> node >> edge;
@@ -39,7 +51,7 @@ int main() {
 		adj[u].push_back(v);
 		adj[v].push_back(u);
 	}
-	DFS(1);
+	DFS_Rec(1);
 
 	return 0;
 }

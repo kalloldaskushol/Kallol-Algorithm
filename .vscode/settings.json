@@ -68,5 +68,17 @@
 		"typeinfo": "cpp",
 		"valarray": "cpp"
 	},
-	"C_Cpp.errorSquiggles": "enabled"
+	"C_Cpp.errorSquiggles": "enabled",
+	"editor.tokenColorCustomizations": {
+		"textMateRules": [
+			{
+				"scope": "comment",
+				"settings": {
+					"foreground": "#b6b5b4b8",
+					"fontStyle": "italic bold"
+				}
+			}
+		],
+		"comments": ""
+	}
 }

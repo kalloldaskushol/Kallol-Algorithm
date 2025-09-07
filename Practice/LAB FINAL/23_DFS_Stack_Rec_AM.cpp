@@ -20,7 +20,7 @@ void DFS_Stack(int start){
 				visit[j] = 1;
 				cout << j << " ";
 				s.push(j);
-				j = 1;
+				j = 1; //! reset j
 			}
 		}
 		s.pop();

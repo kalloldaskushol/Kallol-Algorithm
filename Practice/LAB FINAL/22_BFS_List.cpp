@@ -6,20 +6,20 @@ int visit[1001];
 int node, edge;
 
 void BFS(int start){
-	//Inital Step
+	//! Initial Step
 	visit[start] = 1;
 	cout << start << " ";
 	queue<int> q;
 	q.push(start);
 
-	//repeating step
+	//! Repeating step
 	while(!q.empty()){
 		int x = q.front();
 		q.pop();
 		
 		for(int j = 0; j < adj[x].size(); j++){
 
-			int neighbour = adj[x][j];
+			int neighbour = adj[x][j]; // in AL -> j is not node. So adj[x][j] to get adj node
 			if( visit[neighbour] == 0){
 				visit[neighbour] = 1;
 				cout << neighbour << " ";

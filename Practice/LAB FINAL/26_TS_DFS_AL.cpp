@@ -9,9 +9,11 @@ vector<int> ans;
 void DFS(int start){
 	visit[start] = 1;
 	for(int j = 0; j < adj[start].size(); j++){
+		
 		int adj_node = adj[start][j];
 
 		if(visit[adj_node] == 0){
+
 			DFS(adj_node);
 		}
 	}
